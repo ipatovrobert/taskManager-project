@@ -1,0 +1,163 @@
+///////////////////// VARIABLES ////////////////////////
+
+:root {
+    --main-font: 'Montserrat', sans-serif;
+    --main-color: #3E3E3E;
+}
+
+
+//Reset settings
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //10px
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--main-font)
+}
+
+///////////// TYPOGRAPHY /////////////////////////
+
+
+.heading {
+    font-size: 6rem;
+    color: var(--main-color);
+    //transition: all .2s;
+
+    &:hover {
+        color: red;
+    }
+    
+    &-secondary {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        color: var(--main-color);
+    }
+}
+
+.paragraph {
+    font-size: 2.25rem;
+    color: white;
+}
+
+
+
+//////////////////////////////////////////////////
+.main {
+    //position: absolute;
+    display: flex;
+    text-align: center;
+
+    &-left {
+        flex: 0 1 50vw;
+
+        background-image: url(../img/background.jpg);
+        background-size: cover;
+        background-position: right;
+
+        height: 100vh;
+    }
+
+    &-right {
+        flex: 1 1 50vw;
+
+        &--title {
+            margin-top: 4rem;
+        }
+
+        &--enterData {
+            display: inline-block;
+            margin-top: 10rem;
+
+            label {
+                float: left;
+                margin-bottom: 1rem;
+
+                font-size: 2rem;
+                color: var(--main-color);
+            }
+
+            .taskInput {
+                height: 3.2rem;
+                width: 60rem;
+                padding-left: 3rem;
+
+                border-style: solid;
+                border-width: 1px;
+                border-color: var(--main-color);
+                border-radius: 10rem;
+
+                transition: all .2s;
+
+                &:focus {
+                    outline: 0;
+                    transform: scale(1.03);
+                }
+            }
+
+            .submit {
+                float: right;
+                margin-top: 2rem;
+                padding: 0.7rem 3rem;
+
+                border-style: none;
+                border-radius: 10rem;
+                background-image: linear-gradient(to right, #FEBBBB, #FE0C0C);
+
+                color: white;
+                transition: all .2s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+                &:active {
+                    transform: translateY(1px) scale(0.95);
+
+                }
+            }
+        }
+
+        &--tasksList {
+            margin-top: 10rem;
+            
+
+            .taskCreated {  
+                display: inline-block;
+                min-width: 60rem;
+                transition: all .5s;
+
+                padding: 1rem 2rem;
+                border-radius: 10rem;
+                background-image: linear-gradient(to right, #AEECCF, #7DE9BA);
+
+                &:not(:last-child){
+                    margin-bottom: 2rem;
+                }
+                p {
+                    float: left;
+                    display: inline-block;
+                }
+                img {
+                    position: relative;
+                    transform: translateY(70%);
+                    float: right;
+                    height: 1rem;
+                    
+                }
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+    }
+}

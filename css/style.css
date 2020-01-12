@@ -1,0 +1,99 @@
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --main-color: #3E3E3E; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: var(--main-font); }
+
+.heading {
+  font-size: 6rem;
+  color: var(--main-color); }
+  .heading:hover {
+    color: red; }
+  .heading-secondary {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    color: var(--main-color); }
+
+.paragraph {
+  font-size: 2.25rem;
+  color: white; }
+
+.main {
+  display: flex;
+  text-align: center; }
+  .main-left {
+    flex: 0 1 50vw;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: right;
+    height: 100vh; }
+  .main-right {
+    flex: 1 1 50vw; }
+    .main-right--title {
+      margin-top: 4rem; }
+    .main-right--enterData {
+      display: inline-block;
+      margin-top: 10rem; }
+      .main-right--enterData label {
+        float: left;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        color: var(--main-color); }
+      .main-right--enterData .taskInput {
+        height: 3.2rem;
+        width: 60rem;
+        padding-left: 3rem;
+        border-style: solid;
+        border-width: 1px;
+        border-color: var(--main-color);
+        border-radius: 10rem;
+        transition: all .2s; }
+        .main-right--enterData .taskInput:focus {
+          outline: 0;
+          transform: scale(1.03); }
+      .main-right--enterData .submit {
+        float: right;
+        margin-top: 2rem;
+        padding: 0.7rem 3rem;
+        border-style: none;
+        border-radius: 10rem;
+        background-image: linear-gradient(to right, #FEBBBB, #FE0C0C);
+        color: white;
+        transition: all .2s; }
+        .main-right--enterData .submit:hover {
+          transform: scale(1.05); }
+        .main-right--enterData .submit:active {
+          transform: translateY(1px) scale(0.95); }
+    .main-right--tasksList {
+      margin-top: 10rem; }
+      .main-right--tasksList .taskCreated {
+        display: inline-block;
+        min-width: 60rem;
+        transition: all .5s;
+        padding: 1rem 2rem;
+        border-radius: 10rem;
+        background-image: linear-gradient(to right, #AEECCF, #7DE9BA); }
+        .main-right--tasksList .taskCreated:not(:last-child) {
+          margin-bottom: 2rem; }
+        .main-right--tasksList .taskCreated p {
+          float: left;
+          display: inline-block; }
+        .main-right--tasksList .taskCreated img {
+          position: relative;
+          transform: translateY(70%);
+          float: right;
+          height: 1rem; }
+        .main-right--tasksList .taskCreated:hover {
+          transform: scale(1.05); }

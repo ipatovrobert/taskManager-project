@@ -1,0 +1,23 @@
+{
+  "name": "taskmanager-project",
+  "version": "1.0.0",
+  "description": "A task manager created with Vanilla JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "taskManager",
+    "task",
+    "tasklist",
+    "javascript",
+    "vanilla",
+    "js",
+    "javascript"
+  ],
+  "author": "Ipatov Robert",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
